@@ -22,41 +22,35 @@ export default function Index() {
   };
 
   return (
-    <div className="m-auto flex flex-col items-center gap-12">
-      <h1 className="text-4xl font-mono font-extrabold flex">Guess <BsQuestionSquareFill className="my-8" /> Game</h1>
-      <ul className="text-2xl flex flex-col gap-5 w-40 font-mono">
+    <div className="m-auto flex flex-col items-center gap-12 mt-40 animate-fade-in">
+      <h1 className="text-4xl font-mono font-extrabold flex animate-slide-in-question-mark">
+        Guess <BsQuestionSquareFill className="mt-8 animate-question-mark" /> Game
+      </h1>
+
+      <ul className="text-2xl flex flex-col gap-5 w-40 font-mono animate-fade-in">
         <li className="flex w-full">
-          <Button className="w-full p-7 text-lg" onClick={handleStartClick}>
+          <Button className="w-full p-7 text-lg rounded-none animate-fade-in" onClick={handleStartClick}>
             Play
-          </Button>
-        </li>
-        <li className="flex w-full">
-          <Button className="w-full p-7 text-lg">
-            <Link href="/about">About</Link>
-          </Button>
-        </li>
-        <li className="flex w-full">
-          <Button className="w-full p-7 text-lg">
-            <Link href="https://github.com/danielhash1" target="_blank">GitHub</Link>
           </Button>
         </li>
       </ul>
 
-      <div className='text-center font-mono'>
+      <div className='text-center font-mono animate-fade-in'>
         <p>
           2024
-          <br></br>
-          Developed by <a href='https:github.com/danielhash1' target='_blank' className='bg-gray-100 text-teal-800'>Daniel</a>
+          <br />
+          Developed by <a href='https:github.com/danielhash1' target='_blank' className='bg-gray-100 text-teal-800 hover:text-indigo-800'>Daniel</a>
         </p>
       </div>
-      
+
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-lg font-mono">Are you sure you want to start a game?</h2>
+          <div className=" bg-white p-6 rounded-lg shadow-lg animate-scale-in">
+          <BsQuestionSquareFill className="m-auto size-24 mb-10"/>
+            <h2 className="text-center text-lg font-mono">Are you sure you want to start?</h2>
             <div className="flex justify-center gap-4 mt-4">
-              <Button onClick={handleConfirm} className="bg-black w-20 text-white hover:bg-green-950">Yes</Button>
-              <Button onClick={handleCancel} className="bg-gray-700 w-20 text-white hover:bg-red-950">No</Button>
+              <Button onClick={handleConfirm} className="bg-black w-20 text-white hover:bg-indigo-950 rounded-none">Yes</Button>
+              <Button onClick={handleCancel} className="bg-gray-600 w-20 text-white hover:bg-red-950 rounded-none">No</Button>
             </div>
           </div>
         </div>

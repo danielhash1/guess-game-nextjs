@@ -26,3 +26,60 @@ body {
   }
 }
 
+/* styles/globals.css */
+
+/* Анимация для плавного появления */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Анимация для появления с небольшим смещением */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* Анимация для появления с масштабированием */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Применяем анимации */
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.8s ease-in-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-in-out forwards;
+}
+
+.animate-question-mark {
+  animation: fade-in 2s ease-in-out forwards;
+}
+.animate-slide-in-question-mark {
+  animation: slide-in 1s ease-in-out forwards;
+}
