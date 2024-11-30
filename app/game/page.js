@@ -20,7 +20,7 @@ export default function Game() {
       <div className="m-auto flex flex-col items-center">
         <div>
           <h1 className="text-3xl font-mono font-extrabold ">Mission:</h1>
-          <h1 className="text-3xl font-mono font-extrabold bg-black text-white">// Find all fruits</h1>
+          <h1 className="text-3xl font-mono font-extrabold bg-black text-white">Find all fruits</h1>
         </div>
       
 
